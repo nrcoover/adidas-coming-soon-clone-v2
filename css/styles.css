@@ -179,7 +179,6 @@ input {
         height: inherit;
         max-width: 100%;
         margin: 0 auto;
-        padding-left: 3.5rem;
     }
 
     .mobile-container {
@@ -190,7 +189,6 @@ input {
     }
 
     .hero-banner .logo-wrapper {
-        margin-left: 3.5rem;
         width: 100%;
         display: flex;
         align-items: start;
