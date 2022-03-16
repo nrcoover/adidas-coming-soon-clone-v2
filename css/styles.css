@@ -75,9 +75,9 @@ input {
     }
 
 .hero-banner .hero-image {
-    background-image: url(/images/girl-close-up.png);
+    background-image: url(/images/mobile-shoes.PNG);
     /* alternate image for codepen version */
-    /* background-image: url(https://assets.codepen.io/6060109/athlete-girl.png); */
+    /* background-image: url(https://assets.codepen.io/6060109/mobile-shoes.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -161,9 +161,9 @@ input {
 
 @media only screen and (min-width: 768px) {
     body {
-        background-image: url(/images/desktop-bg-white.PNG);
+        background-image: url(/images/desktop-bg-gray-waves.PNG);
         /* alternate background source for codepen version */
-        /* background-image: url(https://assets.codepen.io/6060109/destop-bg.png); */
+        /* background-image: url(https://assets.codepen.io/6060109/waves.png); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
