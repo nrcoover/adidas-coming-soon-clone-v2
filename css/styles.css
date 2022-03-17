@@ -164,13 +164,10 @@ input {
             z-index: 5;
         }
 
-        /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. */
+        /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. The 1px padding is used for recentering the svg because of it's container's 1px border-bottom.*/
         .email-signup #email-submit-svg {
-            position: absolute;
-            transform: translate(-50%, 10%);
-            opacity: 1;
+            padding-top: 1px;
         }
-
 
 @media only screen and (min-width: 768px) {
     body {
