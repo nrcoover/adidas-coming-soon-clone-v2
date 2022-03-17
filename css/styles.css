@@ -141,19 +141,34 @@ input {
             opacity: 1;
         }
 
-
         .email-signup .email-submit {
             background-color: var(--theme-color-black);
             border-bottom: 1px solid var(--theme-color-black);
             border-radius: 2px;
             color: var(--theme-color-white);
+            display: inline-block;
             font-weight: bold;
-            opacity: 1;
-            padding: 1rem 1.5rem;
+            height: 3.55rem;
+            opacity: 0;
+            padding: 1rem 3rem;
             position: absolute;
             right: 0;
             margin-right: 2.5rem;
             z-index: 10;
+        }
+
+        /* Used for overiding certain css rules from its associated class */
+        .email-signup #submit-svg-container {
+            display: inline;
+            opacity: 1;
+            z-index: 5;
+        }
+
+        /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. */
+        .email-signup #email-submit-svg {
+            position: absolute;
+            transform: translate(-50%, 10%);
+            opacity: 1;
         }
 
 
