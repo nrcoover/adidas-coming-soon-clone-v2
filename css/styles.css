@@ -157,14 +157,12 @@ input {
             z-index: 10;
         }
 
-        /* Used for overiding certain css rules from its associated class */
         .email-signup #submit-svg-container {
             display: inline;
             opacity: 1;
             z-index: 5;
         }
 
-        /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. The 1px padding is used for recentering the svg because of it's container's 1px border-bottom.*/
         .email-signup #email-submit-svg {
             padding-top: 1px;
         }
@@ -249,5 +247,17 @@ input {
 
     .email-signup .email-submit {
         border-bottom: 3px solid var(--theme-color-black);
+    }
+
+    /* Used for overiding certain css rules from its associated class */
+    .email-signup #submit-svg-container {
+        display: inline;
+        opacity: 1;
+        z-index: 5;
+    }
+
+    /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. The 1px padding is used for recentering the svg because of it's container's 1px border-bottom.*/
+    .email-signup #email-submit-svg {
+        padding-top: 1px;
     }
 }
