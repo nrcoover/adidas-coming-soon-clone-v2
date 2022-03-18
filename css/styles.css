@@ -159,12 +159,9 @@ input {
 
         .email-signup #submit-svg-container {
             display: inline;
+            height: 3.25rem;
             opacity: 1;
             z-index: 5;
-        }
-
-        .email-signup #email-submit-svg {
-            padding-top: 1px;
         }
 
 @media only screen and (min-width: 768px) {
@@ -252,6 +249,7 @@ input {
     /* Used for overiding certain css rules from its associated class */
     .email-signup #submit-svg-container {
         display: inline;
+        height: 3.55rem;
         opacity: 1;
         z-index: 5;
     }
