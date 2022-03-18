@@ -26,6 +26,7 @@
     --theme-color-black: #333333; /* rgba(51, 51, 51, 1) */
     --theme-color-brown: #423A3A; 
     --theme-color-red: #CD3A24;
+    --theme-color-blue: #2F80ED;
     --theme-color-white: #FEFFFF; /* rgba(254, 255, 255, 1) */
 }
   
@@ -75,9 +76,9 @@ input {
     }
 
 .hero-banner .hero-image {
-    background-image: url(/images/girl-close-up.png);
+    background-image: url(/images/mobile-shoes.PNG);
     /* alternate image for codepen version */
-    /* background-image: url(https://assets.codepen.io/6060109/athlete-girl.png); */
+    /* background-image: url(https://assets.codepen.io/6060109/mobile-shoes.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -100,7 +101,7 @@ input {
 
     /* intended for the first h2 within .text-info */
     .text-info h2:nth-child(1) {
-        color: var(--theme-color-red);
+        color: var(--theme-color-blue);
         font-weight: normal;
         padding-top: 1.8rem;
         padding-bottom: 1rem;
@@ -140,30 +141,34 @@ input {
             opacity: 1;
         }
 
-
         .email-signup .email-submit {
             background-color: var(--theme-color-black);
             border-bottom: 1px solid var(--theme-color-black);
             border-radius: 2px;
             color: var(--theme-color-white);
+            display: inline-block;
             font-weight: bold;
-            opacity: 1;
-            padding: 1rem 1.5rem;
+            height: 3.55rem;
+            opacity: 0;
+            padding: 1rem 3rem;
             position: absolute;
             right: 0;
             margin-right: 2.5rem;
             z-index: 10;
         }
 
-        .email-signup .email.submit:hover {
-            cursor: pointer;
+        .email-signup #submit-svg-container {
+            display: inline;
+            height: 3.25rem;
+            opacity: 1;
+            z-index: 5;
         }
 
 @media only screen and (min-width: 768px) {
     body {
-        background-image: url(/images/desktop-bg-white.PNG);
+        background-image: url(/images/desktop-bg-gray-waves.PNG);
         /* alternate background source for codepen version */
-        /* background-image: url(https://assets.codepen.io/6060109/destop-bg.png); */
+        /* background-image: url(https://assets.codepen.io/6060109/waves.png); */
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -178,18 +183,16 @@ input {
         height: inherit;
         max-width: 100%;
         margin: 0 auto;
-        padding-left: 3.5rem;
     }
 
     .mobile-container {
-        width: 45vw;
+        width: 55vw;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
 
     .hero-banner .logo-wrapper {
-        margin-left: 3.5rem;
         width: 100%;
         display: flex;
         align-items: start;
@@ -228,11 +231,12 @@ input {
     .hero-image-desktop {
         display: inline-block;
         height: 100%;
-        width: 55vw;
+        width: 45vw;
     }
 
     .hero-image-desktop img {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+        /* clip path was for original version; not used in alternate version */
+        /* clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%); */
         height: 100%;
         object-fit: cover;
         width: 100%;
@@ -240,5 +244,18 @@ input {
 
     .email-signup .email-submit {
         border-bottom: 3px solid var(--theme-color-black);
+    }
+
+    /* Used for overiding certain css rules from its associated class */
+    .email-signup #submit-svg-container {
+        display: inline;
+        height: 3.55rem;
+        opacity: 1;
+        z-index: 5;
+    }
+
+    /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. The 1px padding is used for recentering the svg because of it's container's 1px border-bottom.*/
+    .email-signup #email-submit-svg {
+        padding-top: 1px;
     }
 }
