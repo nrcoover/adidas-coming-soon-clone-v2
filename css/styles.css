@@ -145,6 +145,7 @@ input {
             background-color: var(--theme-color-black);
             border-bottom: 1px solid var(--theme-color-black);
             border-radius: 2px;
+            cursor: pointer;
             color: var(--theme-color-white);
             display: inline-block;
             font-weight: bold;
