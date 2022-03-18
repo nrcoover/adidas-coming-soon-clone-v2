@@ -142,8 +142,10 @@ input {
         }
 
         .email-signup .email-submit {
-            background-color: var(--theme-color-black);
-            border-bottom: 1px solid var(--theme-color-black);
+            background: linear-gradient(135deg, #7C7C7C 0%, #2B2828 100%);
+            box-shadow: 0px 15px 20px rgba(66, 58, 58, 0.15);
+            /* The below rule was necessary for the original design; however, it does not work with the new gradient background; the box shadow above is also an addition to this design. */
+            /* border-bottom: 1px solid var(--theme-color-black); */
             border-radius: 2px;
             cursor: pointer;
             color: var(--theme-color-white);
@@ -163,6 +165,10 @@ input {
             height: 3.25rem;
             opacity: 1;
             z-index: 5;
+        }
+
+        .email-signup #email-submit-svg {
+            transform: translate(0%, -3%);
         }
 
 @media only screen and (min-width: 768px) {
@@ -243,10 +249,6 @@ input {
         width: 100%;
     }
 
-    .email-signup .email-submit {
-        border-bottom: 3px solid var(--theme-color-black);
-    }
-
     /* Used for overiding certain css rules from its associated class */
     .email-signup #submit-svg-container {
         display: inline;
@@ -258,5 +260,9 @@ input {
     /* The SVG is placed, whithin it container, behind the submit button on the z-index. The submit input itself has an opacity of zero so that the svg symbol can be seen from behind without interfering with its functionality. The 1px padding is used for recentering the svg because of it's container's 1px border-bottom.*/
     .email-signup #email-submit-svg {
         padding-top: 1px;
+    }
+
+    .email-signup #email-submit-svg {
+        transform: translate(0%, 5%);
     }
 }
